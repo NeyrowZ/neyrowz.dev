@@ -18,7 +18,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/neyrowz:latest ./website
+          docker build -t ghcr.io/neyrowz/website:latest ./website
       - name: Push Docker image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/neyrowz:latest
+          docker push ghcr.io/neyrowz/website:latest
