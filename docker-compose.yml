@@ -31,7 +31,7 @@ services:
     restart: always
 
   website:
-    build: ./website
+    image: ghcr.io/NeyrowZ/neyrowz:latest
     environment:
       - VIRTUAL_HOST=${DOMAIN}
       - LETSENCRYPT_HOST=${DOMAIN}
