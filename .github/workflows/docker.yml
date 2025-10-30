@@ -17,8 +17,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build Docker image
-        run: |
-          docker build -t ghcr.io/neyrowz/website:latest ./website
+        run: docker build -t ghcr.io/neyrowz/neyrowz.dev:latest ./website
       - name: Push Docker image
-        run: |
-          docker push ghcr.io/neyrowz/website:latest
+        run: docker push ghcr.io/neyrowz/neyrowz.dev:latest
