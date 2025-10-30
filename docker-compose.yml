@@ -12,7 +12,7 @@ services:
     environment:
       - DEFAULT_HOST=${DOMAIN}
     networks:
-      - neyrowz-network
+      - neyrowz-website
     restart: always
 
   letsencrypt:
@@ -27,7 +27,7 @@ services:
       - vhost:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
     networks:
-      - neyrowz-network
+      - neyrowz-website
     restart: always
 
   website:
@@ -39,7 +39,7 @@ services:
     ports:
       - '4000:80'
     networks:
-      - neyrowz-network
+      - neyrowz-website
     restart: always
 
 volumes:
@@ -48,4 +48,4 @@ volumes:
   html:
 
 networks:
-  neyrowz-network:
+  neyrowz-website:
