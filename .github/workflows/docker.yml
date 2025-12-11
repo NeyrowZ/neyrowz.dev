@@ -3,7 +3,8 @@ on:
   push:
     branches:
       - master
-
+    paths:
+      - 'website/**'
 jobs:
   build-and-push:
     runs-on: ubuntu-latest

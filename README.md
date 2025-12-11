@@ -1,6 +1,6 @@
 ## Production
+For production you only need `docker-compose.yml` and `.env` files
 ```sh
-docker login ghcr.io
 docker pull ghcr.io/neyrowz/neyrowz.dev:latest
 docker compose up -d
 ```
